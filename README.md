@@ -34,8 +34,9 @@ Install the following dependencies in your local setup:
 
 Using the following code to load the Surg-3M dataset LMDB and its annotation file:
 ```python
-from surgfm.utils_timeSequenceAndKnn.py import Dataset
 import lmdb
+import numpy as np
+import cv2
 import json
 
 # Load annotation
