@@ -59,10 +59,6 @@ with env.begin() as txn:
         image = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
 
 ```
-### 📈 Statistics
-
-<img width="1000" alt="Screenshot 2025-03-07 at 21 49 51" src="https://github.com/user-attachments/assets/5ba81ee6-9075-419b-9568-b7d479df84cc" />
-
 
 ## 🎉🎉🎉 Surg-FM Foundation Model
 
