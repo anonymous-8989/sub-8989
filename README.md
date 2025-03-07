@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/user-attachments/assets/29c523a2-4456-4783-ba41-8bf026067455" width="75%" height="auto">
+<img src="https://github.com/user-attachments/assets/620dfa36-aab8-44d8-be5d-37d5e8e427ca" width="75%" height="auto">
 </p>
 
 
@@ -16,7 +16,7 @@ The video annotation file can be downloaded here: [labels.json](https://github.c
 
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/ab1ebbeb-a9bf-4965-8de1-3d765840c488" width="70%" > </img>
+  <img src="https://github.com/user-attachments/assets/79f25335-6d8c-4b9b-afe1-59cfd5c84a39" width="70%" > </img>
 </div>
 
 
@@ -61,11 +61,7 @@ with env.begin() as txn:
 ```
 ### 📈 Statistics
 
-
-
-
-<img width="1179" alt="Screenshot 2025-03-07 at 21 17 48" src="https://github.com/user-attachments/assets/6eb4f054-e53a-4810-8743-d01e871e84db" />
-
+<img width="1000" alt="Screenshot 2025-03-07 at 21 49 51" src="https://github.com/user-attachments/assets/5ba81ee6-9075-419b-9568-b7d479df84cc" />
 
 
 ## 🎉🎉🎉 Surg-FM Foundation Model
