@@ -10,7 +10,7 @@ This is the anonymous repository corresponding to the ICCV 2025 submission: "Sur
 You can download Surg-3M dataset and SurgFM foundation model by [this link](https://mega.nz/folder/GVkgDQKZ). 
 **The password to decrypt it is included in the first section of the supplementary material submitted for review.**
 
-The video annotation file can be downloaded here: [labels.json](https://github.com/anonymous-8989/sub8989/blob/main/labels.json)
+The video annotation file can be downloaded here: [labels.json](https://github.com/anonymous-8989/sub-8989/blob/main/labels.json)
 
 ### 🎥 Demo
 
@@ -25,8 +25,8 @@ The video annotation file can be downloaded here: [labels.json](https://github.c
 Install the following dependencies in your local setup:
 
    ```bash
-   $ git clone git@github.com:anonymous-8989/sub8989.git
-   $ cd sub8989 && pip install -r requirements.txt
+   $ git clone git@github.com:anonymous-8989/sub-8989.git
+   $ cd sub-8989 && pip install -r requirements.txt
    ```
 
 
@@ -105,7 +105,7 @@ Alternatively, you can recreate our Surg-3M dataset from scratch
 
 ### 🧱 Data Curation Pipeline
 
-You can use our code of the data curation pipeline and provided annotation file (["*labels.json*"](https://github.com/anonymous-8989/sub8989/blob/main/labels.json)) to recreate the whole Surg-3M dataset.
+You can use our code of the data curation pipeline and provided annotation file (["*labels.json*"](https://github.com/anonymous-8989/sub-8989/blob/main/labels.json)) to recreate the whole Surg-3M dataset.
 
 1. Get your Youtube cookie:
 
@@ -114,7 +114,7 @@ You can use our code of the data curation pipeline and provided annotation file 
    Use the [cookies](https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp) extension to export your Youtube cookies as "cookies.txt".
 
 
-2. Download the annotation file (["*labels.json*"](https://github.com/anonymous-8989/sub8989/blob/main/labels.json)) and use the video downloader to download the original selected Youtube videos.
+2. Download the annotation file (["*labels.json*"](https://github.com/anonymous-8989/sub-8989/blob/main/labels.json)) and use the video downloader to download the original selected Youtube videos.
 
    ```bash
    $ python3 src/video_downloader.py --video-path '../labels.json' --output 'your path to store the downloaded videos' --cookies 'your YouTube cookie file'
