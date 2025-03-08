@@ -10,6 +10,7 @@ This is the anonymous repository corresponding to the ICCV 2025 submission: "Sur
 ## 🔥🔥🔥 Surg-3M Dataset
 You can download Surg-3M dataset and SurgFM foundation model by [this link](https://mega.nz/folder/GVkgDQKZ). 
 **The password to decrypt it is included in the first section of the supplementary material submitted for review.**
+For storage reasons, we resized the images and saved them in LMDB format.
 
 The video annotation file can be downloaded here: [labels.json](https://github.com/anonymous-8989/sub-8989/blob/main/labels.json)
 
