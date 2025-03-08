@@ -3,6 +3,7 @@
 </p>
 
 
+
 This is the anonymous repository corresponding to the ICCV 2025 submission: "Surg-3M: A Dataset and Foundation Model for Perception in Surgical Settings". **This repository is intended for ICCV 2025 reviewers only.**
 
 
