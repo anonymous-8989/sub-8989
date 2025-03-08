@@ -27,9 +27,9 @@ def help(short_option):
     @returns The string with the help information for each command line option.
     """
     help_msg = {
-        '-i': 'Path to the root of the LEMON dataset (required: True)',
-        '-j': 'Path to the root of the LEMON dataset json (required: True)',
-        '-o': 'Path to the processed video output of the LEMON dataset (required: True)',
+        '-i': 'Path to the root of the  dataset (required: True)',
+        '-j': 'Path to the root of the  dataset json (required: True)',
+        '-o': 'Path to the processed video output of the  dataset (required: True)',
         '--classify-models': 'Path to the .pt models file for frame classifier (required: True)',
         '--segment-models': 'Path to the .pt models file for uninfor part segmentation (required: True)',
     }
@@ -39,7 +39,7 @@ def help(short_option):
 def parse_cmdline_params():
     """@returns The argparse args object."""
     # Create command line parser
-    parser = argparse.ArgumentParser(description='LEMON dataset video classifier')
+    parser = argparse.ArgumentParser(description=' dataset video classifier')
     parser.add_argument('-i', '--input', required=True, type=str, 
                         help=help('-i'))
     parser.add_argument('-j', '--input-json', required=True, type=str, 
