@@ -39,14 +39,6 @@ def parse_cmdline_params():
 
 def build_preprocessing_transforms(size: int = 384, randaug_n: int = 2, 
                                    randaug_m: int = 14):
-    """
-    @brief Preprocessing and data augmentation.
-
-    @param[in]  size  Target size of the images to be resized prior 
-                      processing by the network.
-
-    @returns a tuple of two transforms, one for training and another one for testing.
-    """
     
     # Preprocessing for testing
     valid_preproc_tf = torchvision.transforms.Compose([
@@ -58,17 +50,6 @@ def build_preprocessing_transforms(size: int = 384, randaug_n: int = 2,
     return valid_preproc_tf
 
 def build_model(nclasses: int = 2, pretrained: bool = True):
-    """
-    @brief Create Vision Transformer (ViT) model pre-trained on ImageNet-21k 
-           (14 million images, 21,843 classes) at resolution 224x224 
-           fine-tuned on ImageNet 2012 (1 million images, 1,000 classes) 
-           at resolution 384x384.
-
-    @param[in]  nclasses    Number of classes, CIFAR-10 has obviously 
-                            10 classes.
-    @param[in]  pretrained  Initialise the model with the pretrained weights
-                            of ImageNet-21k and ImageNet 2012.
-    """
     #net of Resnet18
     net = torchvision.models.resnet18(pretrained=pretrained)
     net.fc = nn.Linear(net.fc.in_features, nclasses)
@@ -85,13 +66,7 @@ def validate_cmdline_params(args):
 
 def classify_videos(result: dict, path: str, nframes: int = 16, width: int = 1920, 
         height: int = 1080, test_preproc_tf=None ,model_list=None, size: int = 384) -> dict:
-    """
-    @brief Recursive function to computes the summary of each video file in the
-           dataset and write it into a file with the same name but
-           .png extension.
-    @param[in]  path  Path to the root folder of the tree.
-    @returns nothing.
-    """
+
     # If it is a file, and the MD5 has not been already computed
     if os.path.isfile(path):
         # Summarise video
