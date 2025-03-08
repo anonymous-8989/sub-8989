@@ -31,7 +31,6 @@ Install the following dependencies in your local setup:
    $ cd sub-8989 && pip install -r requirements.txt
    ```
 
-
 ### 🔗 Load Dataset
 
 Using the following code to load the Surg-3M dataset LMDB and its annotation file:
