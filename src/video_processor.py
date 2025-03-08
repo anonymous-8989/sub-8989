@@ -168,17 +168,7 @@ def extract_frames(video_path):
 
 
 def non_max_suppression(bboxes, scores, iou_threshold):
-    """
-    Apply non-maximum suppression to remove redundant bounding boxes.
-    
-    Args:
-        bboxes (List[List[float]]): List of bounding boxes in the format [x_min, y_min, x_max, y_max].
-        scores (List[float]): List of confidence scores corresponding to each bounding box.
-        iou_threshold (float): Threshold for intersection-over-union (IoU) to determine overlapping boxes.
-    
-    Returns:
-        List[int]: Indices of the selected bounding boxes after NMS.
-    """
+
     selected_indices = []
     
     # Sort bounding boxes by confidence score
@@ -199,16 +189,7 @@ def non_max_suppression(bboxes, scores, iou_threshold):
     return selected_indices
 
 def calculate_iou(bbox1, bbox2):
-    """
-    Calculate the intersection-over-union (IoU) between two bounding boxes.
-    
-    Args:
-        bbox1 (List[float]): Coordinates of the first bounding box in the format [x_min, y_min, x_max, y_max].
-        bbox2 (List[float]): Coordinates of the second bounding box in the format [x_min, y_min, x_max, y_max].
-    
-    Returns:
-        float: Intersection-over-union (IoU) score.
-    """
+
     # Calculate intersection area
     x_min = max(bbox1[0], bbox2[0])
     y_min = max(bbox1[1], bbox2[1])
@@ -228,14 +209,7 @@ def calculate_iou(bbox1, bbox2):
 
 def build_preprocessing_transforms(size: int = 384, randaug_n: int = 2, 
                                    randaug_m: int = 14):
-    """
-    @brief Preprocessing and data augmentation.
 
-    @param[in]  size  Target size of the images to be resized prior 
-                      processing by the network.
-
-    @returns a tuple of two transforms, one for training and another one for testing.
-    """
     
     # Preprocessing for testing
     valid_preproc_tf = torchvision.transforms.Compose([
@@ -247,10 +221,7 @@ def build_preprocessing_transforms(size: int = 384, randaug_n: int = 2,
     return valid_preproc_tf
 
 def build_model(nclasses: int = 2, mode: str = None, segment_model: str = None):
-    """
-    @param[in]  nclasses 
-    @param[in]  mode  set mode for frame classification or uninformative part mask
-    """
+
     if mode == 'classify':
         #net of Resnet18
         net = torchvision.models.resnet18(num_classes = nclasses)
@@ -268,13 +239,7 @@ def validate_cmdline_params(args):
 
 
 def process_frames(path: str, informative_videos:list, test_preproc_tf = None, classify_models = None, segment_models = None, output_dir = None, classes = None, size: int = 384, threshold = 0.7):
-    """
-    @brief Recursive function to computes the summary of each video file in the
-           dataset and write it into a file with the same name but
-           .png extension.
-    @param[in]  path  Path to the root folder of the tree.
-    @returns nothing.
-    """ 
+
     # If it is a file, and the MD5 has not been already computed
     if os.path.isfile(path):
         # Summarise video
